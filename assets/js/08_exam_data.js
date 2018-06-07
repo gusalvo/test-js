@@ -1,4 +1,23 @@
 var json = {
+
+    getAllPlatforms: function() {
+
+
+        var length = json.data.length
+
+        result = [];
+
+         for(x = 0;x < length;x++){
+
+        result.push(json.data[x].platform);
+
+    }
+            return result;
+
+
+        } ,
+
+
     data: [
         {
             "interactions": {

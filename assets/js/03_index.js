@@ -242,7 +242,14 @@ print(
 
 print(
     getAllPlatforms()
+
 );
+
+print(
+
+    json.getAllPlatforms()
+
+)
 
 
 print(

@@ -8,6 +8,15 @@ var el = document.querySelectorAll(".class"); // Returns a list
 */
 
 
+var banner = document.getElementById("banner");
+banner.style.background = "yellow";
+banner.style.width = "300px";
+banner.style.textAlign = "center";
+
+
+
+
+
 var el = document.getElementById("pippo"); // Returns a single element
 el.style.color = "red";
 
@@ -37,6 +46,7 @@ for (let index = 0; index < title.length; index++) {
 el.className = "nuovaclasse";
 el.style.color = "red";
 el.classList.add("nuovaclasse");
+el.classList.remove("");
 el.id = "id";
 console.log(el.textContent); // print note text content
 

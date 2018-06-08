@@ -8,12 +8,16 @@ var el = document.querySelectorAll(".class"); // Returns a list
 */
 
 
+
+var contenitore = document.getElementById("contenitore");
+// contenitore.style.alignItems = "center";
+
+
+
 var banner = document.getElementById("banner");
 banner.style.background = "yellow";
 banner.style.width = "300px";
-banner.style.textAlign = "center";
-
-
+banner.style.textAlign = "left";
 
 
 

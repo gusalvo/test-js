@@ -12,6 +12,8 @@
 function printMenu(menu) {
     var menuEl = document.getElementById('menuEL');
 
+    menuEl.innerHTML = '';
+
     var dataLength = menu.data.length;
 
     for (var i = 0; i < dataLength; i++) {
@@ -54,6 +56,9 @@ function printMenu(menu) {
 function printPersonalInfos(personal) {
     var personalEl = document.getElementById('personalEl');
 
+    personalEl.innerHTML = '';
+
+
     var div = document.createElement("div");
     div.classList.add("PersonalInfos-image");
     var img = document.createElement("img");
@@ -65,6 +70,9 @@ function printPersonalInfos(personal) {
     // ++++
 
     var divinfo = document.createElement("div");
+
+   //  divinfo.innerHTML = '';
+
     divinfo.classList.add("PersonalInfos-content");
 
     var h1 = document.createElement("h1");
@@ -127,8 +135,42 @@ function printPersonalInfos(personal) {
  * @return {undefined}
  */
 
-function printWorkExperience(work) {
+function printWorkExperience(works) {
     var workEl = document.getElementById('workEl');
+
+    workEl.innerHTML = '';
+
+    var h3 = document.createElement("h3");
+    h3.classList.add("WorkExperience-title");
+    h3.textContent = works.section.title;
+    workEl.appendChild(h3);
+
+    var divwork = document.createElement("div");
+    divwork.classList.add("WorkExperience-content");
+
+    var divworkexp = document.createElement("div");
+    divworkexp.classList.add("WorkExperience-row");
+
+
+    
+        var h4 = document.createElement("h4");
+        h4.textContent = works.data[0].title;
+       // console.log("title");
+        divworkexp.appendChild(h4);
+
+
+        var p = document.createElement("p");
+        p.textContent = works.data[0].description;
+        divworkexp.appendChild(p);
+   
+
+   
+
+
+
+
+    divwork.appendChild(divworkexp);
+    workEl.appendChild(divwork);
 
     // implementation here
 }

@@ -152,23 +152,16 @@ function printWorkExperience(works) {
     divworkexp.classList.add("WorkExperience-row");
 
 
-    var worksLength = api.en.works.data.length;
-
-    for (let f = 0; f < worksLength; f++) {
+    
         var h4 = document.createElement("h4");
-        h4.textContent = works.data[f].title;
+        h4.textContent = works.data[0].title;
        // console.log("title");
         divworkexp.appendChild(h4);
 
 
         var p = document.createElement("p");
-        p.textContent = works.data[f].description;
+        p.textContent = works.data[0].description;
         divworkexp.appendChild(p);
-    }
-
-
-    
-        
    
 
    
@@ -197,7 +190,6 @@ var form = document.querySelector("form");
     var campoInput = document.querySelector("#nome")
     var campoSurname = document.querySelector("#surname")
     var campoExperience = document.querySelector("#experience")
-    var campoDescription = document.querySelector("#description")
     console.log(campoExperience.value);
 
     var lang = document.querySelector('#language-choice');
@@ -208,23 +200,12 @@ var form = document.querySelector("form");
     api[lang.value].personal.data.firstname = campoInput.value;
     api[lang.value].personal.data.surname = campoSurname.value;
     api[lang.value].works.data[0].title = campoExperience.value;
-    api[lang.value].works.data[0].description = campoDescription.value;
 
     console.log(api);
 
     printPersonalInfos(api[lang.value].personal) 
     printWorkExperience(api[lang.value].works)
 
-
-    // Form Work
-
-    /*
-    var obj = {};
-
-    var formWork = document.querySelector("#experience")
-
-    api[lang.value].works.data.push(obj);
-    */
 
    
 });
@@ -263,29 +244,23 @@ function fselect() {
 function SelectOption(param1) {
 
 
+
     var optionselect = document.querySelector('#selectexperience');
+
     optionselect.addEventListener("change", function (params) {
-    
+        
+
         var value = params.target.value;
+
         console.log(value);
-                            
-        var experience = document.querySelector('#experience');
 
-        console.log(optionselect);
+    var experience = document.querySelector('#experience');
 
-            
+
+    experience.value = api.en.works.data[value].title;
+
     
-  
-    if (value == "new") {
-
-        experience.value = " ";
-    }
-
-    else {
-
-        experience.value = api.en.works.data[value].title;
-    }
-           
+        
     })
   
 
@@ -296,52 +271,9 @@ function SelectOption(param1) {
 }
 
 
-
-
-
-
-
-function miafunzione2 (){
-
-    var form = document.querySelector("form");
+function modinput() {
     
-     form.addEventListener("submit", function (e) {
-    // form.addEventListener("keyup", function (e) {
-    
-    
-        e.preventDefault();
-    
-
-    
-        var lang = document.querySelector('#language-choice');
-
-        var jobTitle = document.getElementById('experience');
-        var jobDescription = document.getElementById('description');
-    
-        
-          
-            var obj = {};
-            obj.title = jobTitle.value;
-            obj.description = jobDescription.value;
-       
-            api[lang.value].works.data.push(obj);
-          
-
-          //  api[lang.value].works.data[0].description = campoDescription.value;
-      
-        
-    
-        console.log(api);
-    
-        printPersonalInfos(api[lang.value].personal) 
-        printWorkExperience(api[lang.value].works)
-    
-    
-     
-       
-    });
-    
-    }
+}
 
 
 
@@ -389,9 +321,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   
   fselect();
 
-  // miafunzione();
-
-  miafunzione2();
+  miafunzione();
 
   SelectOption();
 

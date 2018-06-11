@@ -45,6 +45,11 @@ var api = {
                 {
                     title: 'Web Developer @mosaicoon',
                     description: 'en'
+                },
+
+                {
+                    title: 'Architect @mosaicoon',
+                    description: 'en'
                 }
 
             ]

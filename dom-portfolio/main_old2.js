@@ -152,23 +152,16 @@ function printWorkExperience(works) {
     divworkexp.classList.add("WorkExperience-row");
 
 
-    var worksLength = api.en.works.data.length;
-
-    for (let f = 0; f < worksLength; f++) {
+    
         var h4 = document.createElement("h4");
-        h4.textContent = works.data[f].title;
+        h4.textContent = works.data[0].title;
        // console.log("title");
         divworkexp.appendChild(h4);
 
 
         var p = document.createElement("p");
-        p.textContent = works.data[f].description;
+        p.textContent = works.data[0].description;
         divworkexp.appendChild(p);
-    }
-
-
-    
-        
    
 
    

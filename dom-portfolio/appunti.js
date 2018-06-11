@@ -16,3 +16,36 @@ function printMenu(menu) {
         menuEl.appendChild(li);
     }
 }
+
+
+
+
+////////
+
+
+
+
+
+var el = document.querySelector("button");
+
+el.addEventListener("click", function(e){
+    console.log(e.target);
+    console.log(e.type);
+
+    e.preventDefault();
+});
+
+
+var form = document.querySelector("form");
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+});
+
+
+
+var campoInput = document.querySelector("#input")
+
+var name= campoInput.value
+

@@ -175,6 +175,108 @@ function printWorkExperience(works) {
     // implementation here
 }
 
+
+function miafunzione (){
+
+var form = document.querySelector("form");
+
+ form.addEventListener("submit", function (e) {
+// form.addEventListener("keyup", function (e) {
+
+
+    e.preventDefault();
+
+
+    var campoInput = document.querySelector("#nome")
+    var campoSurname = document.querySelector("#surname")
+    var campoExperience = document.querySelector("#experience")
+    console.log(campoExperience.value);
+
+    var lang = document.querySelector('#language-choice');
+    console.log(lang.value);
+    
+
+
+    api[lang.value].personal.data.firstname = campoInput.value;
+    api[lang.value].personal.data.surname = campoSurname.value;
+    api[lang.value].works.data[0].title = campoExperience.value;
+
+    console.log(api);
+
+    printPersonalInfos(api[lang.value].personal) 
+    printWorkExperience(api[lang.value].works)
+
+
+   
+});
+
+}
+
+
+
+function fselect() {
+
+    // Ciclo Select
+
+    var selectLength = api.en.works.data.length;
+
+    for (let y = 0; y < selectLength; y++) {
+
+
+        var selectexperience = document.getElementById('selectexperience');
+
+        var option = document.createElement("option");
+        option.setAttribute("value", y);
+
+        option.textContent = api.en.works.data[y].title;
+
+        selectexperience.appendChild(option);
+    
+       // console.log("experience");
+        
+    }
+    
+}
+
+
+
+
+function SelectOption(param1) {
+
+
+
+    var optionselect = document.querySelector('#selectexperience');
+
+    optionselect.addEventListener("change", function (params) {
+        
+
+        var value = params.target.value;
+
+        console.log(value);
+
+    var experience = document.querySelector('#experience');
+
+
+    experience.value = api.en.works.data[value].title;
+
+    
+        
+    })
+  
+
+
+    console.log(param1)
+
+    
+}
+
+
+function modinput() {
+    
+}
+
+
+
 // VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 // VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 // VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
@@ -213,4 +315,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
         var value = e.target.value;
         render(value);
     })
+
+
+
+  
+  fselect();
+
+  miafunzione();
+
+  SelectOption();
+
+ 
 });  

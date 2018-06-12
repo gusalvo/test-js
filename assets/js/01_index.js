@@ -100,6 +100,7 @@ var info = {
     aggiungi('equitazione');
 
 
+
    // togliere(2);
 
     hobby();

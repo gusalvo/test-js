@@ -49,3 +49,28 @@ var campoInput = document.querySelector("#input")
 
 var name= campoInput.value
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+function selected(e) {
+    var value = e.target.value;
+    render(value);
+}
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    var lang = document.querySelector('#language-choice');
+
+    render(lang.value);
+
+    if (lang == "it") {
+
+        lang.addEventListener('change', selected);
+
+    }
+
+    else
+
+    {
+        lang.removeEventListener('change', selected);
+    }
+
+});  

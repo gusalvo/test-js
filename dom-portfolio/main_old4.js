@@ -112,6 +112,9 @@ function printPersonalInfos(personal) {
     personalEl.appendChild(divinfo)
 
     
+    
+
+
 
 
 
@@ -166,7 +169,6 @@ function printWorkExperience(works) {
 
         var divline = document.createElement("div");
         divline.classList.add("LineRed");
-       // divline.textContent = "...........................";
         divworkexp.appendChild(divline);
 
 
@@ -236,31 +238,6 @@ function SelectOption() {
 
 function miafunzione (){
 
-
-    // ++++++++++++++++++++++ disabilita menu se off
-    var lang = document.querySelector('#language-choice');
-
-    var optionselect1 = document.querySelector('#selecton');
-    optionselect1.addEventListener("change", function (params) {
-
-        var value1 = params.target.value;
-        console.log(value1);
-        
-        if (value1 == "on") {
-
-            lang.addEventListener('change', selected);
-        }
-
-        else {
-
-            lang.removeEventListener('change', selected);
-        }
-         
-        })
-        // ++++++++++++++++++++++++
-
-
-
     var form = document.querySelector("form");
     
      form.addEventListener("submit", function (e) {
@@ -268,7 +245,6 @@ function miafunzione (){
     
         e.preventDefault();
 
-        
 
         var campoInput = document.querySelector("#nome");
         var campoSurname = document.querySelector("#surname");
@@ -361,12 +337,15 @@ function selected(e) {
 }
 
 
+
+
 document.addEventListener("DOMContentLoaded", function (event) {
     var lang = document.querySelector('#language-choice');
 
     render(lang.value);
 
     lang.addEventListener('change', selected);
+
 
 
   
@@ -380,8 +359,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
  
 });  
-
-
-
-    
-

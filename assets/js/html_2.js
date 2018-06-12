@@ -24,7 +24,18 @@ banner.style.textAlign = "left";
 var el = document.getElementById("pippo"); // Returns a single element
 el.style.color = "red";
 
-var el = document.querySelector(".giallo");
+
+// seleziona tutti gli elementi con stile giallo li trasformo in verde
+var el1 = document.querySelectorAll('.giallo');
+console.log(el1);
+// el1[2].style.color = 'green';
+
+for (let i = 0; i < el1.length; i++) {
+    
+    el1[i].style.color = 'green';
+    
+}
+// 
 
 el.classList.add("rosso");
 el.className = "rosso";

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+        <title>Video Javascript</title>
+        
+     
+            
+   
+	</head>
+
+	<body>
+
+        <div class="player" align="center">
+
+
+        <h1>Video</h1>
+        <div align="center">
+                <video width="800" id="video">
+
+                        <source id="url" src="http://192.168.20.173:8080/rogue-one-a-star-wars-story-trailer-2.mp4" type="video/mp4">
+                        <!--<source src="video/sintel-short.mp4" type="video/webm">-->
+                        <!-- fallback content here -->
+                </video>
+        </div> 
+        <br/><br/>
+
+            <div>
+                <button id="play">Play</button>
+                <button id="pause">Pause</button>
+                <button id="increase">Increase</button>
+                <button id="decrease">Decrease</button>
+
+                <!--
+                <button onclick="document.getElementById('video').pause()">pause</button>
+                <button onclick="document.getElementById('video').volume+=0.1">+</button>
+                <button onclick="document.getElementById('video').volume-=0.1">-</button>
+                -->
+
+            </div>
+
+    
+
+        </div>
+
+        <form action="">
+            Url Video:<br>
+            <input type="text" id="urlvideo" placeholder="carica video"><br><br>
+            <input type="button" id="pulsanteinvio" value="Carica">
+        </form>
+        
+        <script src="assets/js/custom-player.js"></script>
+	</body>
+
+
+</html>
+
+
+

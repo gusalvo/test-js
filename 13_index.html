@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Test Javascript</title>
+        
+    </head> 
+
+       
+   <body>
+		<script>
+           function Modulo() {
+    // Variabili associate ai campi del modulo
+    var nome = document.modulo.nome.value;
+    var sesso = document.modulo.sesso.value;
+    
+ 
+    //Effettua il controllo sul campo NOME
+    if ((nome == "") || (nome == "undefined")) {
+        alert("Il campo Nome è obbligatorio.");
+        document.modulo.nome.focus();
+        return false;
+    }
+
+    //Effettua il controllo sul campo SESSO
+    if ((sesso == "") || (sesso == "undefined")) {
+        alert("Il campo Sesso è obbligatorio.");
+        document.modulo.sesso.focus();
+        return false;
+    }
+    
+    //INVIA IL MODULO
+    else {
+        document.modulo.action = "elabora_dati.asp";
+        document.modulo.submit();
+    }
+}
+        </script>
+        
+        <!--<script src="assets/js/13_index.js"></script>-->
+
+
+        <table>
+            <form method="post" name="modulo" >
+                <tr>
+                    <td colspan="2" align="center"><b>Registrazione al servizio</td>
+                </tr>
+                <tr><td><b>Nome</b></td><td><input type="text" name="nome"></td></tr>
+                
+                <tr><td><b>Sesso</b></td><td>
+                  <input type="radio" name="sesso" value="M" required>M
+                  <input type="radio" name="sesso" value="F">F
+                </td>
+                </tr>
+                <tr><td><b>Città</b></td><td>
+                  
+                </td>
+                </tr>
+                
+                <tr><td colspan="2"><b>Firma</b></td></tr><tr>
+                    <td colspan="2" align="center">
+                    
+                    </td>
+                </tr>
+                <tr><td colspan="2" align="right"><input type="button" value="Invia" onClick="Modulo()"></td></tr>
+            </form>
+            </table>
+	</body>
+</html>

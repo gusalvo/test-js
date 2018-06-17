@@ -21,7 +21,7 @@
         <div align="center">
                 <video width="800" id="video">
 
-                        <source id="url" src="http://192.168.20.173:8080/rogue-one-a-star-wars-story-trailer-2.mp4" type="video/mp4">
+                        <source id="url" src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4" type="video/mp4">
                         <!--<source src="video/sintel-short.mp4" type="video/webm">-->
                         <!-- fallback content here -->
                 </video>
@@ -33,12 +33,7 @@
                 <button id="pause">Pause</button>
                 <button id="increase">Increase</button>
                 <button id="decrease">Decrease</button>
-
-                <!--
-                <button onclick="document.getElementById('video').pause()">pause</button>
-                <button onclick="document.getElementById('video').volume+=0.1">+</button>
-                <button onclick="document.getElementById('video').volume-=0.1">-</button>
-                -->
+                <span>&ominus;</span><input  id="volume" type="range" min="1" max="10" step="1"><span>&oplus;</span>
 
             </div>
 

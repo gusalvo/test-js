@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>append demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+ <script src="node_modules/jquery/dist/jquery.min.js" ></script>
+</head>
+<body>
+        <div id="container">
+                <ul id="list">
+     
+                </ul>
+            </div>
+            <input type="button" value="add" id="btn" />
+            <input type="button" value="color" id="btn2" />
+            <input type="button" value="ajax" id="btn3" />
+            
+            <script> 
+
+            /* ++++++++++++++++++++++++++
+
+             $.get({
+                url: 'http://localhost:8080/stats',
+                success: function(data) {
+                    console.log(data)
+                }
+            });
+
+
+            */
+
+
+
+                $(document).ready( function() {
+                   // var n = 0;
+                    
+                    
+                            $('div').before('<h1>Lista</h1>');
+    
+    
+                            $.get({
+                                url: 'https://api.github.com/users',
+                                success: function(dati) {
+
+                                   // console.log(dati)
+
+                                    
+                                    $('#btn3').click( function() {
+                                        $.each(dati, function(index, value) {
+                                            
+                                            $('#list').append('<li><img></li>');
+                                            $('#list').append('<li>' + value.login + ' - ' + value.type + '</li>');
+                                           // $("img").attr('src', value.avatar_url);
+
+                                            
+                                        });
+    
+    
+    
+                                    });
+
+                                
+
+                                }
+                            });
+    
+                            
+                });
+            </script>
+</body>
+</html>

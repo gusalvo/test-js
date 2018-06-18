@@ -74,7 +74,7 @@ var app = (function(d, v) {
       btnincrease.addEventListener('click', v.videoincrease);
       btndecrease.addEventListener('click', v.videodecrease);
       btnvolume.addEventListener('change', function(e) {
-        v.volume(e.target.value);
+      v.volume(e.target.value);
     });
 
 

@@ -1,0 +1,87 @@
+<html>
+    <head> 
+            <script src="node_modules/jquery/dist/jquery.min.js" ></script>
+
+            
+
+            
+            
+    </head>
+            
+
+        <body>
+               
+                <script>
+
+                        /*
+                        var p = document.createElement("p");
+                        p.textContent = "Ciao Ciccio";
+                        document.body.appendChild(p);
+                        */
+        
+                        var div = document.createElement('div');
+                        div.textContent = 'Ciao Ciccio';
+
+                        var div2 = document.createElement('div');
+                        div2.textContent = 'Ciao Div 2';
+
+                        div.appendChild(div2);
+                        document.body.appendChild(div);
+             
+                </script>
+              
+                <script>
+            
+                        /*
+                        $(document).ready(function() {
+                            
+                        })
+                       
+        
+                      $(document).ready(function(){
+        
+        
+                        
+                        var newElement = $('<p>lorem ipsum</p>');
+                        document.body.append(newElement);
+        
+        
+                      })
+        
+                        */
+                    
+                    </script>
+
+                <p></p>
+
+
+                <script>
+                /*      
+                 $( "p" ).append( '<strong>Ciao bello</strong>' );
+                 $('p').css('color', 'red');
+                */   
+               
+                $('p').append('<strong>Ciao Bello</strong>');
+                $('p').css('color', 'red');
+
+
+                
+                var div = $('<div>Mio Div</div>');
+                var div2 = $('<div>Secondo Div</div>');
+                var div3 = $('<div>Terzo Div</div>');
+                $(div2).append(div3);
+                $(div).append(div2);
+                $('body').append(div);
+
+                 /*                       
+                 var newElement = $('<p>lorem ipsum</p>');
+                 el.append(newElement);
+                 */
+
+                </script>
+
+              
+
+        </body>
+   
+</html>

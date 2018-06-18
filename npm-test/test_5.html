@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>attr demo</title>
+  <style>
+  img {
+    padding: 10px;
+  }
+  div {
+    color: red;
+    font-size: 24px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<img>
+
+ 
+<div><b>Attribute of Ajax</b></div>
+ 
+<script>
+$( "img" ).attr({
+  src: "https://2.bp.blogspot.com/-F4jszpW691M/WC91ORuwsoI/AAAAAAAAB-c/rtFnTYmQRLAdv4ThqRYj8qLoWmtEcg6egCLcB/s1600/Animated-GIF-Banana.gif",
+  title: "jQuery",
+  alt: "jQuery Logo"
+});
+// $( "div" ).text( $( "img" ).attr( "alt" ) );
+</script>
+ 
+</body>
+</html>

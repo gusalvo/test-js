@@ -57,5 +57,10 @@ $(document).ready(function () {
             
                 el.play();
         })
+
+        $('#pause').click(function () {
+            
+            el.pause();
+    })
     
 });

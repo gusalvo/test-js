@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <script src="node_modules/jquery/dist/jquery.min.js" ></script>
+
+        <script>
+            /*
+            
+            // ----------------------------------------
+            // select by id
+            // ----------------------------------------
+            var el = document.getElementById("id"); // Returns a single element
+            var el = $('#id');
+
+            // ----------------------------------------
+            // select by class
+            // ----------------------------------------
+            var el = document.getElementsByClassName("class");  // Returns a list
+            var el = $('.class');
+            
+            // ----------------------------------------
+            // select by tagname
+            // ----------------------------------------
+            var el = document.getElementsByTagName("tag");  // Returns a list
+            var el = $('tag');
+            
+            // ----------------------------------------
+            // append new element
+            // ----------------------------------------
+            el.append(newElement);
+
+            var newElement = $('<p>lorem ipsum</p>');
+            el.append(newElement);
+            
+            // ----------------------------------------
+            // insert before element
+            // ----------------------------------------
+            document.body.insertBefore(newElement, elementodiriferimento);
+            
+            $('#id').before('<p>lorem ipsum</p>'); // returns #id  
+            $('<p>lorem ipsum</p>').insertBeforebefore('#id'); // returns p
+            
+            // ----------------------------------------
+            // edit class
+            // ----------------------------------------
+            el.className = "nuovaclasse";
+            
+            $('#id').prop('class', 'nuovaclasse')
+            
+            // ----------------------------------------
+            // edit css style
+            // ----------------------------------------
+            el.style.color = "red";
+            
+            $('#id').css('color', 'red');
+            
+            // ----------------------------------------
+            // add new class
+            // ----------------------------------------
+            $('#id').addClass('nuovaClasse');
+            
+            el.classList.add("nuovaclasse");
+
+            // ----------------------------------------
+            // Events
+            // ----------------------------------------
+            $('#id').click(function () {
+                console.log($(this));
+            })
+            
+            // it appends the events to new elements in dom
+            $(document).on('click', '#id', function () {
+                console.log($(this));
+            })
+
+            // ----------------------------------------
+            // Ajax
+            // ----------------------------------------
+
+            $.ajax({
+                method: 'GET|POST',
+                dataType="json",
+                data: { x: 1, y: 2 },
+                url: 'http://localhost:8080/stats',
+                success: function(data) {
+                    console.log(data)
+                }
+            });
+
+            $.get({
+                url: 'http://localhost:8080/stats',
+                success: function(data) {
+                    console.log(data)
+                }
+            });
+
+            $.post({
+                dataType="json",
+                data: { x: 1, y: 2 },
+                url: 'http://localhost:8080/stats',
+                success: function(data) {
+                    console.log(data)
+                }
+            });
+            */
+
+            $(document).ready(function() {
+
+              //  add();
+                addp();
+                
+            })
+
+
+            function add() {
+
+                $('#btn').click(function () {
+                    
+                    console.log($(this));
+
+                    $('#list').css('color', 'red');
+                    
+                    /*
+                    var newElement = $('<li>testo</li>');
+                    $('#list').append(newElement);
+                    */
+
+                   // $( 'li:eq(4)' ).remove();
+
+                   // $( 'li:even' ).remove();
+
+                   // $( 'li:last' ).remove();
+
+                   $( 'li:first' ).remove();
+
+                })
+                
+            }
+
+            function addp() {
+
+                el.append(newElement);
+
+                var newElement = $('<p>lorem ipsum</p>');
+                el.append(newElement);
+
+
+                
+            }
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <ul id="list">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+        <input type="button" value="send" id="btn" />        
+    </body>
+</html>
